@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.myapp.dao.DeptDao">
+    <select id="selectList" parameterType="com.example.myapp.model.Dept" resultType="com.example.myapp.model.Dept">
+        SELECT 	 ORD_NO deptno
+                ,ITEM_ID  dept
+                ,SETTL_VEN_ID loc
+        FROM 	settl_item_sales_accum
+        WHERE	1=1
+        AND		critn_dt ='20210301'
+        AND 	rownum <![CDATA[<]]> 4
+    </select>
+</mapper>
